@@ -1,0 +1,87 @@
+:root {
+  --dark: #212121;
+  --light: #f3f3f3;
+  --gradColor: linear-gradient(to top left, #72f3ac 30%, #04813c);
+}
+
+.flipCard {
+  margin-top: 1rem;
+  margin-left: 12px;
+  width: 140px;
+  height: 200px;
+  perspective: 300px;
+}
+
+.insideCard {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  transform: rotateY(-180deg);
+  transition: transform 0.5s linear;
+}
+
+.card_face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.frontCard {
+  background-image: var(--gradColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backCard {
+  background-color: var(--light);
+  transition: transform 0.5s linear;
+  transform: rotateY(180deg);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  user-select: none;
+  position: relative;
+  height: 70%;
+  padding: 30px 30px 40px;
+  letter-spacing: 0.2rem;
+}
+
+.header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--gradColor);
+  z-index: -1;
+}
+
+.pp {
+  width: 120px;
+  height: 120px;
+  margin: 40px auto 30px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+}
+
+.header h3 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 900;
+  margin: 70% 0 0 -5px;
+  text-align: center;
+}
