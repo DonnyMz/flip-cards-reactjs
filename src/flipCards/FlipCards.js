@@ -44,7 +44,7 @@ function FlipCards() {
       </section>
       <style>
         {`
-          section {
+           section {
             display: flex;
             padding:20px;
             width:80%;

@@ -21,7 +21,6 @@
   transform: rotateY(-180deg);
   transition: transform 0.5s linear;
 }
-
 .card_face {
   position: absolute;
   width: 100%;
